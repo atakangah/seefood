@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/yourmeal_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/fav" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/snapped_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/overview_image_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/overview" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/recognition_result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sausage Barbecue"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/textBlack"
+                android:textSize="20sp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_viewpager_rounded_white"
+                android:minHeight="100dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/cardview_txt"
+                    android:textSize="16sp" />
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <!--            <Button android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="@string/tell_me_more_btn_label"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_marginBottom="2dp"-->
+            <!--                    android:paddingHorizontal="15dp"-->
+            <!--                    android:background="@drawable/bg_button_results_rounded"/>-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

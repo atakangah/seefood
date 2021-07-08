@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ThirdActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/blackTxt">
+
+        <com.seefood.app.views.AutoFitTextureView
+                android:id="@+id/textureView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"/>
+
+
+        <TextView
+                android:id="@+id/scanBtn"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginBottom="40dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_round_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center|bottom"/>
+
+        <ImageView
+                android:id="@+id/flashBtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_baseline_flash_off_24"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="25dp"
+                android:layout_below="@id/scanBtn"
+                android:clickable="true"/>
+
+        <TextView
+                android:id="@+id/processingTxt"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:background="@drawable/ic_processing_background"
+                android:text="@string/status_processing"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="top|center"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:padding="10dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

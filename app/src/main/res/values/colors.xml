@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- custom colors from walkthrough -->
+
+    <color name="colorPrimary">#0E7539</color>
+    <color name="colorPrimaryDark">#0B552A</color>
+    <color name="colorAccent">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="blackTxt">#0d0e15</color>
+    <color name="grayTxt">#8c8c8c</color>
+    <color name="darkerGrayTxt">#5C424242</color>
+    <color name="fav">#13AA52</color>
+    <color name="closeToBlack">#121212</color>
+    <color name="headerShadow">#DAD8D8</color>
+</resources>

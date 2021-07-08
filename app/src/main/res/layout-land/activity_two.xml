@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.seefood.app.SecondActivity">
+
+
+    <!--Left Section Start-->
+    <LinearLayout
+        android:id="@+id/lay_one"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_header_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|left"
+                    android:paddingLeft="8dp"
+                    android:text="Slide 1"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/blackTxt"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/header"
+                />
+
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center"
+                android:paddingBottom="15dp"
+                app:ci_drawable="@drawable/ic_brightness_1_black_24dp"
+                app:ci_drawable_unselected="@drawable/ic_brightness_1_grey_24dp"
+                app:ci_height="5dp"
+                app:ci_width="5dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--Left Section End-->
+
+
+    <!--Right Section Start-->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/two">
+
+            <TextView
+                android:id="@+id/tv_thirdnextstep"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/ic_button_background"
+                android:clickable="true"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="Next Step"
+                android:textColor="@color/blackTxt"
+                android:textSize="18.7sp" />
+
+    </RelativeLayout>
+    <!--Right Section End-->
+
+</LinearLayout>

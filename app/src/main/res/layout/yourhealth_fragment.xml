@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/yourhealth_label"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/fav" />
+
+
+            <TextView
+                android:id="@+id/sub_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="17sp"
+                android:text="Ingredients"
+                android:textColor="@color/fav"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_viewpager_rounded_white"
+                android:text="@string/cardview_txt"
+                android:textSize="16sp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/sub_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="17sp"
+                android:text="Nutritional Benefits"
+                android:textColor="@color/fav"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_viewpager_rounded_white"
+                android:text="@string/cardview_txt"
+                android:textSize="16sp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/sub_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="17sp"
+                android:text="Healthy For You?"
+                android:textColor="@color/fav"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_viewpager_rounded_white"
+                android:text="@string/cardview_txt"
+                android:textSize="16sp"
+                android:layout_margin="5dp"/>
+
+
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="200dp"-->
+            <!--                    app:cardCornerRadius="20dp">-->
+            <!--                <ImageView-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:scaleType="centerCrop"-->
+            <!--                        android:src="@drawable/overview"-->
+            <!--                        android:contentDescription="@string/treatments_feature_image_description"/>-->
+            <!--            </androidx.cardview.widget.CardView>-->
+            <!--            <androidx.core.widget.NestedScrollView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:padding="5dp"-->
+            <!--                    android:background="@drawable/bg_viewpager_rounded_white">-->
+            <!--            <Button android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="@string/tell_me_more_btn_label"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_marginBottom="2dp"-->
+            <!--                    android:paddingHorizontal="15dp"-->
+            <!--                    android:background="@drawable/bg_button_results_rounded"/>-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

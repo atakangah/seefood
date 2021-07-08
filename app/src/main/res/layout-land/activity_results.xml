@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:weightSum="1"
+              android:paddingHorizontal="5dp"
+              android:paddingVertical="5dp"
+              android:background="@color/darkerGrayTxt">
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".5"
+            android:background="@drawable/bg_drawable_landscape_confidence_rounded_edge">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@string/result_confidences_label"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white" />
+
+        <RelativeLayout
+                android:id="@+id/resultHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="3dp"/>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                <RelativeLayout
+                        android:id="@+id/v1_holder"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/v2_holder"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                            android:id="@+id/v1t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your Meal"
+                            android:textSize="10sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/v1"/>
+
+                    <ImageView
+                            android:id="@+id/v1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@drawable/bg_rounded_tabs"
+                            android:foreground="@drawable/ic_baseline_remove_red_eye_24"
+                            android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                        android:id="@+id/v2_holder"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/v3_holder"
+                        app:layout_constraintStart_toEndOf="@+id/v1_holder"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                            android:id="@+id/v2t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="For Your Health"
+                            android:textSize="10sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/v2"/>
+
+                    <ImageView
+                            android:id="@+id/v2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_rounded_tabs"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ic_baseline_accessibility_24"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                        android:id="@+id/v3_holder"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/v2_holder"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                            android:id="@+id/v3t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rescan"
+                            android:textSize="10sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/v3"/>
+
+                    <ImageView
+                            android:id="@+id/v3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bg_rounded_tabs"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ic_baseline_autorenew_24"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@drawable/bg_viewpager_rounded_white"/>
+
+
+</LinearLayout>

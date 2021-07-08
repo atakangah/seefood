@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seefood.app">
+
+    <!-- Allows access to the flashlight -->
+    <permission android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal"
+        android:label="@string/permlab_flashlight"
+        android:description="@string/permdesc_flashlight" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.things.permission.MODIFY_SCREEN_SETTINGS"/>
+    <uses-permission android:name="com.google.android.things.permission.USE_PERIPHERAL_IO" />
+    <uses-permission
+        android:name="com.google.android.things.permission.MANAGE_INPUT_DRIVERS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:theme="@style/AppTheme">
+
+        <!-- <uses-library android:name="com.google.android.things" /> -->
+
+        <activity android:name="com.seefood.app.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- <category android:name="android.intent.category.HOME" /> -->
+                <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.seefood.app.SecondActivity" />
+        <activity android:name="com.seefood.app.ThirdActivity" android:hardwareAccelerated="true" />
+        <activity android:name="com.seefood.app.ResultsActivity" />
+
+    </application>
+
+</manifest>

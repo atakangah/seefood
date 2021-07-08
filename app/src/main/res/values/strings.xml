@@ -1,0 +1,16 @@
+<resources>
+    <string name="permdesc_flashlight">Permission to use phone\'s flashlight to take pictures</string>
+    <string name="permlab_flashlight">Flashlight Permission</string>
+
+
+    <string name="start">See food</string>
+    <string name="cardview_txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ut labore et dolore magna aliqua.</string>
+    <string name="status_processing">Processing...</string>
+    <string name="yourhealth_label">Your Health</string>
+    <string name="yourmeal_label">Your Meal</string>
+    <string name="overview_image_description">Overview feature image</string>
+    <string name="tell_me_more_btn_label">Tell me more</string>
+    <string name="treatments_feature_image_description">Treatments feature image</string>
+    <string name="result_confidences_label">Result Confidences</string>
+
+</resources>
