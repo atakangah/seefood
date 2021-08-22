@@ -1,4 +1,4 @@
-package com.seefood.app;
+package com.seefood.app.utilities;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -37,6 +37,8 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 import static android.os.Trace.beginSection;
+
+import com.seefood.app.models.Recognition;
 
 public class MyImageProcessor {
 
@@ -125,7 +127,7 @@ public class MyImageProcessor {
     private static final String LABELS_FILE = "seefoodlabel.txt";
     private static final String MODEL_FILE = "seefoodmodel.tflite";
 
-    protected MyImageProcessor(Activity activity) throws IOException {
+    public MyImageProcessor(Activity activity) throws IOException {
 
         tfliteModel = FileUtil.loadMappedFile(activity, MODEL_FILE);
         // TODO: Create a TFLite interpreter instance
@@ -283,7 +285,7 @@ public class MyImageProcessor {
     }
 
 
-    static class ByteBufferBackedInputStream extends InputStream {
+    public static class ByteBufferBackedInputStream extends InputStream {
 
         ByteBuffer buf;
 

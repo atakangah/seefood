@@ -1,4 +1,4 @@
-package com.seefood.app;
+package com.seefood.app.utilities;
 
 /*
  * Copyright 2017 The Android Things Samples Authors.
@@ -49,7 +49,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.seefood.app.views.AutoFitTextureView;
+import com.seefood.app.overrides.AutoFitTextureView;
 
 /**
  * CameraHandler handles the Camera2 Android APIs, including initializing, configuring the actual
@@ -165,9 +165,6 @@ public class CameraHandler {
         }
     };
 
-
-    private CameraHandler() {
-    }
 
     private static class InstanceHolder {
         private static CameraHandler mCamera = new CameraHandler();

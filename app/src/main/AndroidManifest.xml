@@ -26,7 +26,7 @@
 
         <!-- <uses-library android:name="com.google.android.things" /> -->
 
-        <activity android:name="com.seefood.app.StartActivity">
+        <activity android:name="com.seefood.app.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -38,8 +38,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.seefood.app.SecondActivity" />
-        <activity android:name="com.seefood.app.ThirdActivity" android:hardwareAccelerated="true" />
+        <activity android:name="com.seefood.app.CameraActivity" android:hardwareAccelerated="true" />
         <activity android:name="com.seefood.app.ResultsActivity" />
 
     </application>

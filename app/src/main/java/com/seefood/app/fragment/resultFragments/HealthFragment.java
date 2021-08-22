@@ -1,4 +1,4 @@
-package com.seefood.app.fragment.pagerFragments;
+package com.seefood.app.fragment.resultFragments;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -16,6 +16,6 @@ public class HealthFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.yourhealth_fragment, container, false);
+        return inflater.inflate(R.layout.health_fragment, container, false);
     }
 }

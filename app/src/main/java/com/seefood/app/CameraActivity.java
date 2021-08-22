@@ -32,9 +32,13 @@ import java.nio.ByteBuffer;
 import java.util.Collection;
 import java.util.List;
 
-import com.seefood.app.views.AutoFitTextureView;
+import com.seefood.app.models.Recognition;
+import com.seefood.app.utilities.CameraHandler;
+import com.seefood.app.utilities.MyImageProcessor;
+import com.seefood.app.utilities.TensorFlowHelper;
+import com.seefood.app.overrides.AutoFitTextureView;
 
-public class ThirdActivity extends AppCompatActivity implements CameraHandler.PreviewDimChosen {
+public class CameraActivity extends AppCompatActivity implements CameraHandler.PreviewDimChosen {
     private static final String TAG = "DEBUG";
 
     private static final String LABELS_FILE = "seefoodlabel.txt";
@@ -92,7 +96,7 @@ public class ThirdActivity extends AppCompatActivity implements CameraHandler.Pr
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_three);
+        setContentView(R.layout.activity_camera);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         mTextureView = findViewById(R.id.textureView);
@@ -235,7 +239,7 @@ public class ThirdActivity extends AppCompatActivity implements CameraHandler.Pr
 
         mRecognitionResults = results;
 
-        final Intent processIntent = new Intent(ThirdActivity.this, ResultsActivity.class);
+        final Intent processIntent = new Intent(CameraActivity.this, ResultsActivity.class);
         startActivity(processIntent);
     }
 

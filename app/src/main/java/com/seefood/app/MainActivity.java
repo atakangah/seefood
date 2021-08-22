@@ -14,7 +14,7 @@ import com.seefood.app.Adapter.Adapter_walkthrough;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class StartActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     public ViewPager viewpager;
     Adapter_walkthrough adapter_walkthrough;
@@ -28,7 +28,7 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
+        setContentView(R.layout.activity_main);
 
         viewpager = findViewById(R.id.viewpager);
 
@@ -77,7 +77,7 @@ public class StartActivity extends AppCompatActivity {
     }
 
     public void getStarted(View view) {
-        Intent act3Intent = new Intent(StartActivity.this, ThirdActivity.class);
+        Intent act3Intent = new Intent(MainActivity.this, CameraActivity.class);
         startActivity(act3Intent);
     }
 

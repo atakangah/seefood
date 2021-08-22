@@ -13,7 +13,7 @@ import com.seefood.app.Adapter.Adapter_walkthrough;
 import com.seefood.app.R;
 
 
-public class Fragment_walkthroughtwo extends Fragment {
+public class OnboardingFragment3 extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class Fragment_walkthroughtwo extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_walkthroughtwo,container,false);
+        return inflater.inflate(R.layout.fragment_onboarding3,container,false);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Fragment_walkthroughtwo extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
 
         if (this.isVisible()) {
-            Adapter_walkthrough.updateTab("Slide 2");
+            Adapter_walkthrough.updateTab("Slide 3");
         }
     }
 }

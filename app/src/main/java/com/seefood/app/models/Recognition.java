@@ -1,4 +1,4 @@
-package com.seefood.app;
+package com.seefood.app.models;
 
 /**
  * An immutable result returned by a Classifier describing what was recognized.

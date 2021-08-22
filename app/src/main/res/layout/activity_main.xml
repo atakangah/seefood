@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="com.seefood.app.StartActivity">
+              tools:context="com.seefood.app.MainActivity">
 
 
     <RelativeLayout

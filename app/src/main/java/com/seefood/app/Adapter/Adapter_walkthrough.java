@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.seefood.app.fragment.Fragment_walkthroughone;
-import com.seefood.app.fragment.Fragment_walkthroughthree;
-import com.seefood.app.fragment.Fragment_walkthroughtwo;
+import com.seefood.app.fragment.OnboardingFramgment1;
+import com.seefood.app.fragment.OnboardingFragment3;
+import com.seefood.app.fragment.OnboardingFragment2;
 
 
 public class Adapter_walkthrough extends FragmentStatePagerAdapter {
@@ -28,16 +28,16 @@ public class Adapter_walkthrough extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                Fragment_walkthroughone tab1 = new Fragment_walkthroughone();
+                OnboardingFramgment1 tab1 = new OnboardingFramgment1();
                 return tab1;
 
             case 1:
-                Fragment_walkthroughtwo tab2 = new Fragment_walkthroughtwo();
+                OnboardingFragment2 tab2 = new OnboardingFragment2();
                 return tab2;
 
 
             case 2:
-                Fragment_walkthroughthree tab3 = new Fragment_walkthroughthree();
+                OnboardingFragment3 tab3 = new OnboardingFragment3();
                 return tab3;
 
 

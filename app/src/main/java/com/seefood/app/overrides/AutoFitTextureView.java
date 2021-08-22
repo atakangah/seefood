@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.seefood.app.views;
+package com.seefood.app.overrides;
 
 import android.content.Context;
 import android.util.AttributeSet;

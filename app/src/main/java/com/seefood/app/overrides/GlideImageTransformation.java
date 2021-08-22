@@ -1,4 +1,4 @@
-package com.seefood.app.utilities;
+package com.seefood.app.overrides;
 
 import android.content.Context;
 import android.graphics.Bitmap;

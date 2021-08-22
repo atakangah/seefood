@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.seefood.app.Adapter.PagerAdapter;
-import com.seefood.app.fragment.pagerFragments.MealFragment;
-import com.seefood.app.fragment.pagerFragments.HealthFragment;
+import com.seefood.app.fragment.resultFragments.MealFragment;
+import com.seefood.app.fragment.resultFragments.HealthFragment;
 
 public class ResultsActivity extends AppCompatActivity {
 

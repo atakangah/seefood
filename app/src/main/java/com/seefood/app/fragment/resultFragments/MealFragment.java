@@ -1,4 +1,4 @@
-package com.seefood.app.fragment.pagerFragments;
+package com.seefood.app.fragment.resultFragments;
 
 import android.os.Bundle;
 
@@ -17,8 +17,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.seefood.app.R;
-import com.seefood.app.Recognition;
-import com.seefood.app.ThirdActivity;
+import com.seefood.app.models.Recognition;
+import com.seefood.app.CameraActivity;
 
 import java.io.File;
 import java.util.Collection;
@@ -30,7 +30,7 @@ public class MealFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mOverviewLayout = inflater.inflate(R.layout.yourmeal_fragment, container, false);
+        mOverviewLayout = inflater.inflate(R.layout.meal_fragment, container, false);
         final File sourceFile = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES), "tensorflow_preview.png");
         ImageView snappedImgView = mOverviewLayout.findViewById(R.id.snapped_img);
@@ -48,7 +48,7 @@ public class MealFragment extends Fragment {
     }
 
     public void setRecognitionResult() {
-        Collection<Recognition> mRecognition = ThirdActivity.mRecognitionResults;
+        Collection<Recognition> mRecognition = CameraActivity.mRecognitionResults;
 
         if (mRecognition == null || mRecognition.isEmpty())
             return;
