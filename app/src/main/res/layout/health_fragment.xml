@@ -37,6 +37,7 @@
                 />
 
             <TextView
+                android:id="@+id/ingredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_viewpager_rounded_white"
@@ -58,6 +59,7 @@
                 />
 
             <TextView
+                android:id="@+id/healthBenefits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_viewpager_rounded_white"
@@ -79,6 +81,7 @@
                 />
 
             <TextView
+                android:id="@+id/healthAdvice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_viewpager_rounded_white"

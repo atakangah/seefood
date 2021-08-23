@@ -11,14 +11,15 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 
 import com.seefood.app.Adapter.Adapter_walkthrough;
+import com.seefood.app.utilities.JSONParser;
+import com.seefood.app.utilities.Messenger;
 
 import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity {
 
     public ViewPager viewpager;
-    Adapter_walkthrough adapter_walkthrough;
-
+    public Adapter_walkthrough adapter_walkthrough;
 
     private int REQUEST_CODE = 100;
     private String PERMISSION_CAMERA = Manifest.permission.CAMERA;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         indicator.setViewPager(viewpager);
 
         adapter_walkthrough.registerDataSetObserver(indicator.getDataSetObserver());
+
+        Messenger.setSeefoodNutrition(JSONParser.parseJSON(getApplicationContext()));
     }
 
 

@@ -34,6 +34,7 @@ import java.util.List;
 
 import com.seefood.app.models.Recognition;
 import com.seefood.app.utilities.CameraHandler;
+import com.seefood.app.utilities.Messenger;
 import com.seefood.app.utilities.MyImageProcessor;
 import com.seefood.app.utilities.TensorFlowHelper;
 import com.seefood.app.overrides.AutoFitTextureView;
@@ -225,10 +226,7 @@ public class CameraActivity extends AppCompatActivity implements CameraHandler.P
      *              and power consuming.
      */
     private void doIdentification(Bitmap image) {
-
-
         // Report the results with the highest confidence
-
     }
 
 
@@ -236,8 +234,7 @@ public class CameraActivity extends AppCompatActivity implements CameraHandler.P
      * Image classification process complete
      */
     private void onClassificationComplete(Collection<Recognition> results) {
-
-        mRecognitionResults = results;
+        Messenger.setRecognitionResults(results);
 
         final Intent processIntent = new Intent(CameraActivity.this, ResultsActivity.class);
         startActivity(processIntent);

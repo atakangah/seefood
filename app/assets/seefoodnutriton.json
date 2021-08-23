@@ -1,8 +1,8 @@
-{
-  "Sausage Barbecue": {
+[
+  {
+    "key": "0",
     "ingredients": ["maize", "tomatoes"],
-    "nutritonalBenefits": ["zinc", "Vitamin A"],
-    "healthAdvice": ""
-  },
-
-}
+    "benefits": ["zinc", "Vitamin A"],
+    "healthAdvice": "eat daily for good skin"
+  }
+]

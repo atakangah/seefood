@@ -19,6 +19,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.seefood.app.R;
 import com.seefood.app.models.Recognition;
 import com.seefood.app.CameraActivity;
+import com.seefood.app.utilities.Messenger;
 
 import java.io.File;
 import java.util.Collection;
@@ -48,16 +49,12 @@ public class MealFragment extends Fragment {
     }
 
     public void setRecognitionResult() {
-        Collection<Recognition> mRecognition = CameraActivity.mRecognitionResults;
+        Collection<Recognition> mRecognition = Messenger.getRecognitionResults();
 
-        if (mRecognition == null || mRecognition.isEmpty())
-            return;
+        if (mRecognition == null || mRecognition.isEmpty()) return;
 
         Iterator<Recognition> it = mRecognition.iterator();
         Recognition recognitionTopResult = it.next();
-
-        while (it.hasNext())
-            Log.d("DEBUG", "result: "+it.next().getTitle());
 
         TextView recognitionResultTextView = mOverviewLayout.findViewById(R.id.recognition_result_text);
         recognitionResultTextView.setText(recognitionTopResult.getTitle().replaceFirst("\\d", ""));

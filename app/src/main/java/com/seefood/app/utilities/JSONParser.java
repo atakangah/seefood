@@ -3,6 +3,8 @@ package com.seefood.app.utilities;
 import android.content.Context;
 import android.util.Log;
 
+import com.seefood.app.models.Nutrition;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,28 +32,42 @@ public class JSONParser {
         return json;
     }
 
-    public static void parseJSON(Context appContext) {
+    private static ArrayList<String> parseArrayList(JSONArray jsonArray) throws JSONException {
+        ArrayList<String> resultArray = new ArrayList<>();
+        for (int x = 0; x < jsonArray.length(); x++)
+            resultArray.add(jsonArray.getString(x));
+
+        return resultArray;
+    }
+
+    public static HashMap<Integer, Nutrition> parseJSON(Context appContext) {
         try {
-            JSONObject obj = new JSONObject(loadJSONFromAsset(appContext));
-            JSONArray m_jArry = obj.getJSONArray("formules");
-            ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
-            HashMap<String, String> m_li;
+            JSONArray nutritionArray = new JSONArray(loadJSONFromAsset(appContext));
+            HashMap<Integer, Nutrition> nutritionMap = new HashMap();
 
-            for (int i = 0; i < m_jArry.length(); i++) {
-                JSONObject jo_inside = m_jArry.getJSONObject(i);
-                Log.d("Details-->", jo_inside.getString("formule"));
-                String formula_value = jo_inside.getString("formule");
-                String url_value = jo_inside.getString("url");
+            for (int i = 0; i < nutritionArray.length(); i++) {
+                JSONObject nutritionObject = nutritionArray.getJSONObject(i);
 
-                //Add your values in your `ArrayList` as below:
-                m_li = new HashMap<String, String>();
-                m_li.put("formule", formula_value);
-                m_li.put("url", url_value);
+                int key = Integer.parseInt(nutritionObject.getString("key"));
+                String healthAdvice = nutritionObject.getString("healthAdvice");
+                ArrayList<String> ingredients = parseArrayList(nutritionObject.getJSONArray("ingredients"));
+                ArrayList<String> healthBenefits = parseArrayList(nutritionObject.getJSONArray("benefits"));
+                Log.d("DEBUG", "health all ====>" + healthAdvice);
 
-                formList.add(m_li);
+                Nutrition nutrition = new Nutrition();
+                nutrition.setKey(key);
+                nutrition.setHealthAdvice(healthAdvice);
+                nutrition.setHealthBenefits(healthBenefits);
+                nutrition.setIngredients(ingredients);
+
+                nutritionMap.put(key, nutrition);
             }
+
+            return nutritionMap;
         } catch (JSONException e) {
             e.printStackTrace();
+            Log.d("DEBUG", "Error"+e.getMessage());
         }
+        return null;
     }
 }

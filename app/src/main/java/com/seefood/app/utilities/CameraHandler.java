@@ -57,7 +57,7 @@ import com.seefood.app.overrides.AutoFitTextureView;
  * with the TensorFlow model.
  */
 public class CameraHandler {
-    private static final String TAG = "DEBUG";
+    public static final String TAG = "DEBUG";
 
     private static final int MAX_IMAGES = 2;
     private CameraDevice mCameraDevice;
@@ -101,7 +101,7 @@ public class CameraHandler {
     private int FLASH_MODE = CaptureRequest.FLASH_MODE_OFF;
 
 
-    interface PreviewDimChosen {
+    public interface PreviewDimChosen {
         void onPreviewSizeChosen(Size size, int sensorOrientation);
 
         int getDisplayOrientation();
